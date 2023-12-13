@@ -10,11 +10,19 @@ class EliminateDuplicateTextTest {
 
     public static final String SIMPLE_STRING = "AABBCCD112233";
 
+    public static final String SIMPLE_LOWER_STRING = "AaBbCCD112233";
+
     public static final String CLEAN_STRING = "ABCD123";
 
     @Test
-    void deleteDuplicateInString() {
+    void deleteDuplicateInStringTest() {
         String result = EliminateDuplicateText.deleteDuplicateInString(SIMPLE_STRING);
+        assertEquals(CLEAN_STRING, result);
+    }
+
+    @Test
+    void deleteDuplicateInStringLowerTest() {
+        String result = EliminateDuplicateText.deleteDuplicateInString(SIMPLE_LOWER_STRING);
         assertEquals(CLEAN_STRING, result);
     }
 }
