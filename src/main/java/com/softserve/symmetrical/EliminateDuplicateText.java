@@ -7,6 +7,6 @@ public class EliminateDuplicateText {
                 StringBuilder::new,
                 StringBuilder::appendCodePoint,
                 StringBuilder::append
-        ).toString();
+        ).toString().replaceAll(" ", "");
     }
 }
